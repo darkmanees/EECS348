@@ -1,0 +1,48 @@
+<html>
+
+<head>
+   
+    <title>CSS-Font Control</title>
+</head>
+<a href="index.html">Go to Homepage</a>
+<style>
+    #paragraph { border-style: solid;
+                border-width: 10px;}
+</style>
+
+
+
+<body>
+    <div id="paragraph">sdghlkasdgioansdgilkasnid;gioasdn;koagjnsalgjidnasd;jkgnasd asldknasdkjnasd asldansdlkna asdlknasdlk lkandfla ;laskd  a;jldja  asdlka </div>
+    <script type="text/javascript">
+
+
+
+        function myFunction(){
+            var border_r=document.getElementById('border_r').value;
+            var border_g=document.getElementById('border_g').value;
+            var border_b=document.getElementById('border_b').value;
+            var border_w=document.getElementById('border_w').value;
+            var background_r=document.getElementById('background_r').value;
+            var background_g=document.getElementById('background_g').value;
+            var background_b=document.getElementById('background_b').value;
+        
+            var component=document.getElementById("paragraph");
+            component.style.borderColor= `rgb(${border_r},${border_g},${border_b})`;
+            component.style.borderWidth= border_w
+            component.style.backgroundColor = `rgb(${background_r},${background_g},${background_b})`;
+        }
+        </script>
+    Border R(0-255) : <input type="text", id="border_r" value=""><br>
+    Border G(0-255) : <input type="text", id="border_g" value=""><br>
+    Border B(0-255) : <input type="text", id="border_b" value=""><br>
+    Border Width : <input type="text", id="border_w" value =""><br>
+    Background R(0-255) : <input type="text", id="background_r" value=""><br>
+    Background G(0-255) : <input type="text", id="background_g" value=""><br>
+    Background B(0-255) : <input type="text", id="background_b" value=""><br>
+    <button onclick="myFunction()">Change the color</button>
+
+    
+</body>
+
+</html>
